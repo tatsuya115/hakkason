@@ -159,13 +159,20 @@ h1, h2, h3 {
 }
 
 .header_genre {
-    width: 50px;
+    width: 100px;
     margin: 10px auto;
+    text-align: center;
 }
 
 .genre_list li {
-    width: 8%;
+    width: 12%;
     height: 100px;
+}
+
+.header_genre a {
+    display: block;
+    height: 100%;
+    width: 100%
 }
 
 .genre_list span {
@@ -176,6 +183,38 @@ h1, h2, h3 {
     height: 50px;
     width: auto;
     margin-bottom: 10px;
+}
+
+.restaurant_text {
+    color: #F98007;
+}
+
+.beauty_salon_text {
+    color: ;
+}
+
+.clothes_shop_text {
+
+}
+
+.entertainment_text {
+
+}
+
+.gym_text {
+
+}
+
+.works_text {
+
+}
+
+.leisure_text {
+
+}
+
+.encounter_text {
+
 }
 
 .top_view {
@@ -246,8 +285,9 @@ h1, h2, h3 {
     transform: translate(-50%,-50%);
     margin:0;
     padding:0;
-    font-size: 28px;
+    font-size: 24px;
     color: #fff;
+    font-weight: 600;
 }
 
 .event-table {
@@ -274,12 +314,17 @@ h1, h2, h3 {
     padding: 0 10px 10px;
 }
 
-.button a {
-    font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
-    font-size: 18px;
-    border: 2px solid black;
-    padding: 7px 80px;
-    margin: 70px 0 120px 0;
-    width: 150px;
+.button {
+    margin: 40px 0 120px 0;
     display: inline-block;
+    width: 40%;
+    padding: 12px;
+    color: #07c;
+    cursor: pointer;
+    border: 1px solid #00A0E8;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 1px 2px 0px 1px #d9d9d9;
+    -moz-box-shadow: 1px 2px 0px 1px #d9d9d9;
+    -webkit-box-shadow: 1px 2px 0px 1px #d9d9d9;
 }
