@@ -83,36 +83,52 @@
                     <h2 class="title"><img class="search_icon" src="./image/search_icon.png">ジャンルから探す</h2>
                     <div class="contents">
                         <div class="content">
-                            <img src="./image/restaurant.jpg">
-                            <p>飲食店</p>
+                            <a href="genre.html">
+                                <img src="./image/restaurant.jpg">
+                                <p>飲食店</p>
+                            </a>
                         </div>
                         <div class="content">
-                            <img src="./image/beauty_salon.jpg">
-                            <p>美容院</p>
+                            <a href="#">
+                                <img src="./image/beauty_salon.jpg">
+                                <p>美容院</p>
+                            </a>
                         </div>
                         <div class="content">
-                            <img src="./image/clothes_shop.jpg">
-                            <p>洋服店</p>
+                            <a href="#">
+                                <img src="./image/clothes_shop.jpg">
+                                <p>洋服店</p>
+                            </a>
                         </div>
                         <div class="content">
-                            <img src="./image/entertainment.jpg">
-                            <p>娯楽</p>
+                            <a href="#">
+                                <img src="./image/entertainment.jpg">
+                                <p>娯楽</p>
+                            </a>
                         </div>
                         <div class="content">
-                            <img src="./image/gym.jpg">
-                            <p>ジム</p>
+                            <a href="#">
+                                <img src="./image/gym.jpg">
+                                 <p>ジム</p>
+                            </a>
                         </div>
                         <div class="content">
-                            <img src="./image/works.jpg">
-                            <p>コワーキング</p>
+                            <a href="#">
+                                <img src="./image/works.jpg">
+                                <p>コワーキング</p>
+                            </a>
                         </div>
                         <div class="content">
-                            <img src="./image/leisure.jpg">
-                            <p>レジャー</p>
+                            <a href="#">
+                                <img src="./image/leisure.jpg">
+                                <p>レジャー</p>
+                            </a>
                         </div>
                         <div class="content">
-                            <img src="./image/encounter.jpg">
-                            <p>出会い</p>
+                            <a href="#">
+                                <img src="./image/encounter.jpg">
+                                <p>出会い</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -122,20 +138,28 @@
                     <h2 class="title"><img class="search_icon" src="./image/search_icon.png">エリアから探す</h2>
                     <div class="contents">
                         <div class="content">
-                            <img src="./image/kitami_img.jpg">
-                            <p>北見</p>
+                            <a href="#">
+                                <img src="./image/kitami_img.jpg">
+                                <p>北見</p>
+                            </a>
                         </div>
                         <div class="content">
-                            <img src="./image/tanno_img.jpg">
-                            <p>端野</p>
+                            <a href="#">
+                                <img src="./image/tanno_img.jpg">
+                                <p>端野</p>
+                            </a>
                         </div>
                         <div class="content">
-                            <img src="./image/rubeshibe_img.jpg">
-                            <p>留辺蘂</p>
+                            <a href="#">
+                                <img src="./image/rubeshibe_img.jpg">
+                                <p>留辺蘂</p>
+                            </a>
                         </div>
                         <div class="content">
-                            <img src="./image/tokoro_img.jpg">
-                            <p>常呂</p>
+                            <a href="#">
+                                <img src="./image/tokoro_img.jpg">
+                                <p>常呂</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +187,19 @@
         </main>
         <!-- Footer -->
         <footer>
-
+            <footer>
+                <div class="container">
+                    <div class="footer_info">
+                        <ul class="list_footer_info">
+                            <li><a href="#">サイトマップ</a></li>
+                            <li><a href="#">プライバシーポリシー</a></li>
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                        <p>Copyright ©︎ teruberi,Inc. Allright Reserved</p>
+                    </div>
+                </div>
+            </footer>
         </footer>
         <script>
             fetch('http://127.0.0.1:3000/api/v1/facilities')
@@ -174,7 +210,7 @@
                 }).catch(error => {
                     console.log(error);
                 });
-            </script>
+        </script>
     </body>
 
 </html>

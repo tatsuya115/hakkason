@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WZXMKD7');</script>
+        <!-- End Google Tag Manager -->
+        <meta charset="UTF-8">
+        <title>きたっぷ　北見市にある店舗を探す</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <!-- css -->
+        <link rel="stylesheet" href="stylesheet.css">
+
+        <script type="text/javascript" src="../javascript/jquery.inview.min.js"></script>
+        <script type="text/javascript" src="../javascript/jquery.easing.1.3.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="data.js"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <div class="header_inner">
+                <div class="header_logo">
+                    <a href="#">きたっぷ</a>
+                </div>
+            </div>
+            <div class="header_genre_area">
+                <ul class="genre_list">
+                    <li>
+                        <div class="header_genre">
+                            <a href="#"><img src="./image/restaurant_icon.png" class="genre_icon"><span class="restaurant_text">飲食店</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header_genre">
+                            <a href="#"><img src="./image/beauty_salon_icon.png" class="genre_icon"><span class="beauty_salon_text">美容院</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header_genre">
+                            <a href="#"><img src="./image/clothes_shop_icon.png" class="genre_icon"><span class="clothes_shop_text">洋服店</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header_genre">
+                            <a href="#"><img src="./image/entertainment_icon.png" class="genre_icon"><span class="entertainment_text">娯楽</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header_genre">
+                            <a href="#"><img src="./image/gym_icon.png" class="genre_icon"><span class="gym_text">ジム</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header_genre">
+                            <a href="#"><img src="./image/works_icon.png" class="genre_icon"><span class="works_text">コワーキング</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header_genre">
+                            <a href="#"><img src="./image/leisure_icon.png" class="genre_icon"><span class="leisure_text">レジャー</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header_genre">
+                            <a href="#"><img src="./image/encounter_icon.png" class="genre_icon"><span class="encounter_text">出会い</span></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- main -->
+        <main>
+            <div class="genre_container">
+                <div class="list_area">
+                    <table>
+                        <thead>
+                          <tr>
+                            <th>名前</th>
+                            <th>年齢</th>
+                            <th>電話番号</th>
+                          </tr>
+                        </thead>
+                        <tbody id="memberList"></tbody>
+                    </table>
+                </div>
+                <div class="map_area">
+
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <footer>
+                <div class="container">
+                    <div class="footer_info">
+                        <ul class="list_footer_info">
+                            <li><a href="#">サイトマップ</a></li>
+                            <li><a href="#">プライバシーポリシー</a></li>
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                        <p>Copyright ©︎ teruberi,Inc. Allright Reserved</p>
+                    </div>
+                </div>
+            </footer>
+        </footer>
+          
+          <script>
+            const memberList = document.getElementById("memberList");
+            
+            // jsonファイルから情報を取得
+            async function getMembers() {  
+              const response = await fetch(
+                "http://127.0.0.1:3000/api/v1/facilities"
+              );
+              const members = await response.json();
+              return members;
+            }
+            
+            //  リストアップするmember
+            async function listMembers(){
+              const members = await getMembers();
+              members.forEach(addList);
+            }
+            
+            // リストに追加
+            function addList(member){
+              const tr = document.createElement("tr");
+              memberList.appendChild(tr);
+              const objArray = Object.entries(member);
+              objArray.forEach((key) => {
+                const td = document.createElement("td");
+                td.textContent = key[1];
+                tr.appendChild(td);
+              });
+            }
+            
+            window.addEventListener("load", listMembers);
+          </script>
+        <!-- <script>
+            fetch('http://127.0.0.1:3000/api/v1/facilities')
+                .then(response =>  {
+                    return response.json();
+                }).then( res => {
+            console.log(res);
+                }).catch(error => {
+                    console.log(error);
+                });
+        </script> -->
+    </body>
+
+</html>

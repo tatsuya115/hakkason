@@ -190,31 +190,31 @@ h1, h2, h3 {
 }
 
 .beauty_salon_text {
-    color: ;
+    color: #0DA8F7;
 }
 
 .clothes_shop_text {
-
+    color: #42FF00;
 }
 
 .entertainment_text {
-
+    color: 	#E07CFB;
 }
 
 .gym_text {
-
+    color: 	#FFE300;
 }
 
 .works_text {
-
+    color: #3AABD2;
 }
 
 .leisure_text {
-
+    color: 	#FF0000;
 }
 
 .encounter_text {
-
+     color: #FFBAF5;
 }
 
 .top_view {
@@ -233,11 +233,11 @@ h1, h2, h3 {
 }
 
 .top_view h1 {
-    font-size: 36px;
+    font-size: 64px;
 }
 
 .explanatory_text {
-    font-size: 18px;
+    font-size: 20px;
     padding-top: 50px;
     line-height: 1.5;
 }
@@ -270,10 +270,24 @@ h1, h2, h3 {
     width: 24%;
     position: relative;
     margin-bottom: 16px;
+    transition-duration: 0.5s;
+}
+
+.content:hover{
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    transform: translateY(-10px);
+    transition-duration: 0.5s;
+}
+
+.content a {
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
 .content img {
     width: 100%;
+    cursor: pointer;
 }
 
 .content p {
@@ -327,4 +341,59 @@ h1, h2, h3 {
     box-shadow: 1px 2px 0px 1px #d9d9d9;
     -moz-box-shadow: 1px 2px 0px 1px #d9d9d9;
     -webkit-box-shadow: 1px 2px 0px 1px #d9d9d9;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #00A0E8;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_info {
+    height: 30px;    
+    line-height: 30px;  
+}
+
+.list_footer_info li {
+    float: left;
+    margin-right: 18px;
+}
+
+.list_footer_info a {
+    text-decoration: underline;
+    color: #737373;
+}
+
+.copyright {
+    font-size: 10px;
+    color: #737373;
+}
+
+.copyright p {
+    height: 30px;    
+    line-height: 30px;
+}
+
+.genre_container {
+    display: flex;
+}
+
+.list_area {
+    background-color: #00A0E8;
+    width: 50%;
+    height: 300px;
+}
+
+.map_area {
+    background-color: #42FF00;
+    width: 50%;
+    height: 300px;
 }
