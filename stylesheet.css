@@ -189,35 +189,35 @@ h1, h2, h3 {
 }
 
 .restaurant_text {
-    color: #F98007;
+    color: #00641C;
 }
 
 .beauty_salon_text {
-    color: #0DA8F7;
+    color: #00641C;
 }
 
 .clothes_shop_text {
-    color: #42FF00;
+    color: #00641C;
 }
 
 .entertainment_text {
-    color: 	#E07CFB;
+    color: 	#00641C;
 }
 
 .gym_text {
-    color: 	#FFE300;
+    color: 	#00641C;
 }
 
 .works_text {
-    color: #3AABD2;
+    color: #00641C;
 }
 
 .leisure_text {
-    color: 	#FF0000;
+    color: 	#00641C;
 }
 
 .encounter_text {
-     color: #FFBAF5;
+     color: #00641C;
 }
 
 /* .top_view {
@@ -447,12 +447,15 @@ footer .container {
 .data_content {
     /* background-color: #00A0E8; */
     margin: 30px 20px;
-    border: 1px solid #000;
+    border: 1px solid #00641C;
+    border-radius: 9px;
 }
 
 .data_title {
     padding: 10px 0 7px 10px;
-    background-color: #d9d9d9;
+    background-color: #00641C;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
 }
 
 .data_description {
@@ -471,7 +474,7 @@ footer .container {
 
 .data_content p {
     font-size: 14px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 .map_area {
@@ -479,3 +482,30 @@ footer .container {
     width: 50%;
     height: 300px;
 }
+
+.content{
+    opacity: 0;
+  }
+  
+  /*==================================================
+  ふわっ
+  ===================================*/
+  
+  .fadeUp {
+    animation-name:fadeUpAnime;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }

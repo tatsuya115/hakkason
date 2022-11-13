@@ -87,6 +87,7 @@
                     <div class="footer_info">
                         <ul class="list_footer_info">
                             <li><a href="#">サイトマップ</a></li>
+                            <li><a href="#">お問い合わせ</a></li>
                             <li><a href="#">プライバシーポリシー</a></li>
                         </ul>
                     </div>
@@ -97,7 +98,14 @@
             </footer>
         </footer>
         <script>
-            fetch('http://127.0.0.1:3000/api/v1/facilities')
+            // URLを取得
+            const url = new URL(window.location.href);
+            // URLSearchParamsオブジェクトを取得
+            const params = url.searchParams;
+            // パラメータから「mdc」を取得
+            let categories = params.get("categories");
+            // var local_url = 'http://127.0.0.1:3000/api/v1/facilities';
+            fetch(categories) //categories/1
                 .then(response =>  {
                     return response.json();
                 }).then( res => {
@@ -123,7 +131,7 @@
                      }
                 }).catch(error => {
                     console.log(error);
-                });
+            });
         </script>
     </body>
 
